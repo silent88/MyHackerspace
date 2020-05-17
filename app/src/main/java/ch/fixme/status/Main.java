@@ -251,6 +251,8 @@ public class Main extends Activity {
             return null;
         }
         try {
+			// Code that deals with SpaceAPI directory.json
+			// ----------------------------------------------------------------------
             JSONObject obj = new JSONObject(mResultDir);
             JSONArray arr = obj.names();
             int len = obj.length();
@@ -263,6 +265,7 @@ public class Main extends Activity {
             for (int i = 0; i < len; i++) {
                 mHsUrls.add(i, obj.getString(mHsNames.get(i)));
             }
+            // ----------------------------------------------------------------------
 
             // Create the dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(Main.this);
